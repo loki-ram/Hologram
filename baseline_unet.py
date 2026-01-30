@@ -386,9 +386,9 @@ if __name__ == "__main__":
 
     # Save visualizations
     print("\nGenerating visualizations...")
-    plot_training_history(history, save_path=os.path.join(visuals_dir, "training_curves.png"))
-    plot_metrics_history(history, save_path=os.path.join(visuals_dir, "metrics.png"))
-    visualize_results(model, val_loader, n=4, save_path=os.path.join(visuals_dir, "results.png"))
+    plot_training_history(history, save_path=os.path.join(visuals_dir, "training_curves_base.png"))
+    plot_metrics_history(history, save_path=os.path.join(visuals_dir, "metrics_base.png"))
+    visualize_results(model, val_loader, n=4, save_path=os.path.join(visuals_dir, "results_base.png"))
     
     torch.save(model.state_dict(), os.path.join(visuals_dir, "baseline_unet_final.pth"))
     print(f"\n✓ All results saved to: {visuals_dir}")
